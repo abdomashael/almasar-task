@@ -18,7 +18,7 @@ const CRow = (id, name, fleetsNo) => {
             <td className={'m-auto'}>
                 <Link to={`/edit/${id}`}>
 
-                    <CButton size={'s'} haveIcon={false} >Edit</CButton>
+                    <CButton size={'s'} haveIcon={false}>Edit</CButton>
                 </Link>
             </td>
         </tr>
@@ -26,8 +26,8 @@ const CRow = (id, name, fleetsNo) => {
     )
 }
 
-const getAllCompanies =async ()=>{
-    let res = await  GetAllCompanies()
+const getAllCompanies = async () => {
+    let res = await GetAllCompanies()
     return res.data.Data
 }
 
@@ -35,9 +35,9 @@ const CTable = () => {
     const [companies, setCompanies] = useState([]);
 
     useEffect(() => {
-        getAllCompanies().then(data=>{
-            console.log(data)
-            setCompanies(data)})
+        getAllCompanies().then(data => {
+            setCompanies(data)
+        })
     }, []);
 
     return (
@@ -51,8 +51,9 @@ const CTable = () => {
                 <th><FontAwesomeIcon size="lg" icon={faCog}/></th>
             </tr>
             </thead>
-            {companies.map(({ID,Name,TotalFleet})=>CRow(ID,Name,TotalFleet))}
-
+            <tbody>
+            {companies.map(({ID, Name, TotalFleet}) => CRow(ID, Name, TotalFleet))}
+            </tbody>
         </Table>
     );
 };

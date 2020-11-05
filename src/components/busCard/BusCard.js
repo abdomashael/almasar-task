@@ -9,7 +9,7 @@ import DropZoneField from "./DropZoneField";
 import PropTypes from "prop-types";
 import {BusesContext} from "../form/CForm";
 import {connect} from "react-redux";
-import {ADD_COUNTRIES, ADD_VEHICLE_TYPES} from "../../redux/actions";
+import {ADD_VEHICLE_TYPES} from "../../redux/actions";
 import {GetVehicleType} from "../../utils/api/Lookup";
 
 
@@ -83,6 +83,7 @@ const BusCard = ({
                             <Field name={`bus${busNo}Type`} label={'Vehicle type 1'}
                                    validate={validateField}
                                    component={({input, meta, label}) => {
+                                       input.value=busData&&busData.BusTypeID
                                        return renderInput({
                                            input,
                                            meta,

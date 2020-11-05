@@ -12,7 +12,7 @@ const Home = () => {
             <Row xs={7}>
                 <Link to={'/new'}>
                     <CButton haveIcon={true} icon={<FontAwesomeIcon size="lg" icon={faPlus}/>} onClick={() => {
-                    }} size={'m'}>
+                    }} size={'l'}>
                         Add Transportations
                     </CButton>
                 </Link>
