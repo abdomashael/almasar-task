@@ -1,0 +1,14 @@
+@use '../app/App.scss' as base;
+
+.card{
+  text-align: start;
+}
+
+.title{
+  color: base.$primary-color;
+  font-weight: bold;
+}
+
+.error{
+  color: red;
+}

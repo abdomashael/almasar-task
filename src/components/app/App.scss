@@ -1,0 +1,12 @@
+@import "~bootstrap/scss/bootstrap";
+
+$primary-color :#306C95;
+
+
+.App {
+  text-align: center;
+}
+
+.primary-background{
+  background-color: $primary-color !important;
+}
